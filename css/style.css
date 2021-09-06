@@ -970,8 +970,8 @@ header.is-burgermenu-active .header__menu-open {
 
 .slider--big .slick-dots {
     position: absolute;
-    left: 75px;
-    bottom: 50px;
+    left: 77px;
+    bottom: 64px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -979,7 +979,7 @@ header.is-burgermenu-active .header__menu-open {
 }
 
 .slider--big .slick-dots li {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .slider--big .slick-dots li:last-child {
@@ -1006,6 +1006,10 @@ header.is-burgermenu-active .header__menu-open {
     background-color: rgba(255, 255, 255, .4);
     font-size: 0;
     line-height: 0;
+}
+
+.slider--big .slick-dots button:focus {
+    outline: 0;
 }
 
 /* portfolio */
@@ -1204,11 +1208,23 @@ header.is-burgermenu-active .header__menu-open {
     margin-bottom: 0;
 }
 
+.gallery__img-wrap {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.gallery__img-wrap:hover .gallery__img {
+    transform: scale(1);
+}
+
 .gallery__img {
     display: block;
-    margin-bottom: 20px;
     width: 100%;
     height: auto;
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
 .gallery__item-container {
