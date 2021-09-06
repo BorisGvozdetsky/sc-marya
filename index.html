@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1350, initial-scale=1.0">
+    <title>Marya - Мебельная фабрика</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="icon-message" viewBox="0 0 17 16">
+            <path
+                d="M7 11.5H6.8099L6.66782 11.6263L3 14.8866V12V11.5H2.5H2C1.17157 11.5 0.5 10.8284 0.5 10V2C0.5 1.17157 1.17157 0.5 2 0.5H15C15.8284 0.5 16.5 1.17157 16.5 2V10C16.5 10.8284 15.8284 11.5 15 11.5H7Z"
+                stroke="white" />
+        </symbol>
+        <symbol id="icon-status" viewBox="0 0 17 17">
+            <circle cx="8.5" cy="8.5" r="8" stroke="white" />
+            <path d="M5.5 8L8.07692 10.5L12.5769 6" stroke="white" />
+        </symbol>
+        <symbol id="icon-location" viewBox="0 0 17 21">
+            <path
+                d="M16.1 8.07692C16.1 10.9855 14.3563 14.0101 12.3773 16.3855C11.4022 17.5559 10.4034 18.5283 9.60598 19.2019C9.20609 19.5396 8.86807 19.7927 8.61795 19.9557C8.5742 19.9842 8.53491 20.0088 8.5 20.0298C8.46509 20.0088 8.4258 19.9842 8.38205 19.9557C8.13193 19.7927 7.79391 19.5396 7.39402 19.2019C6.59657 18.5283 5.59782 17.5559 4.62272 16.3855C2.64369 14.0101 0.9 10.9855 0.9 8.07692C0.9 4.15596 4.25879 0.9 8.5 0.9C12.7412 0.9 16.1 4.15596 16.1 8.07692ZM8.31004 20.1296C8.31022 20.1293 8.31528 20.1271 8.32471 20.1241C8.31457 20.1284 8.30986 20.1299 8.31004 20.1296ZM8.67529 20.1241C8.68468 20.1271 8.68975 20.1292 8.68996 20.1296C8.69018 20.1299 8.68546 20.1284 8.67529 20.1241Z"
+                stroke="black" stroke-width="1.8" />
+            <circle cx="8.5" cy="8.5" r="2.6" stroke="black" stroke-width="1.8" />
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8.33648 14.6881C11.8444 14.6881 14.6881 11.8444 14.6881 8.33648C14.6881 4.82859 11.8444 1.98488 8.33648 1.98488C4.82859 1.98488 1.98488 4.82859 1.98488 8.33648C1.98488 11.8444 4.82859 14.6881 8.33648 14.6881ZM8.33648 16.673C12.9406 16.673 16.673 12.9406 16.673 8.33648C16.673 3.73237 12.9406 0 8.33648 0C3.73237 0 0 3.73237 0 8.33648C0 12.9406 3.73237 16.673 8.33648 16.673Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.2609 20L13.0435 14.7826L14.447 13.3791L19.6644 18.5965L18.2609 20Z" />
+        </symbol>
+        <symbol id="icon-cell" viewBox="0 0 18 20">
+            <path
+                d="M15.9498 11.8909L15.5709 11.5861C15.469 11.5045 15.3868 11.4011 15.3302 11.2835C15.2737 11.1659 15.2443 11.0371 15.2442 10.9066V7.38736C15.2437 5.87499 14.7185 4.40964 13.7583 3.24125C12.798 2.07287 11.4621 1.27383 9.97844 0.980429C9.9061 0.699848 9.74255 0.451271 9.5135 0.273792C9.28446 0.096313 9.00292 0 8.71317 0C8.42341 0 8.14187 0.096313 7.91283 0.273792C7.68379 0.451271 7.52024 0.699848 7.4479 0.980429C5.96346 1.27294 4.62655 2.0716 3.66541 3.24007C2.70426 4.40854 2.17845 5.87438 2.17775 7.38736V10.9066C2.17767 11.0371 2.14827 11.1659 2.09173 11.2835C2.03519 11.4011 1.95295 11.5045 1.85109 11.5861L1.47216 11.8909C1.01452 12.2568 0.644714 12.7206 0.389947 13.2482C0.13518 13.7759 0.00193104 14.3539 0 14.9398V15.6628C0 16.1249 0.183552 16.568 0.510278 16.8947C0.837003 17.2214 1.28014 17.405 1.7422 17.405H5.33984C5.53618 18.1488 5.97313 18.8066 6.58254 19.276C7.19196 19.7454 7.93957 20 8.70881 20C9.47805 20 10.2257 19.7454 10.8351 19.276C11.4445 18.8066 11.8814 18.1488 12.0778 17.405H15.6798C16.1418 17.405 16.585 17.2214 16.9117 16.8947C17.2384 16.568 17.422 16.1249 17.422 15.6628V14.9485C17.4213 14.3611 17.2887 13.7814 17.0339 13.2522C16.7791 12.7229 16.4086 12.2577 15.9498 11.8909ZM8.71099 18.2761C8.40695 18.2743 8.10869 18.1929 7.84584 18.0401C7.58299 17.8873 7.36471 17.6683 7.2127 17.405H10.2136C10.0612 17.6689 9.84228 17.8883 9.57861 18.0412C9.31493 18.194 9.01577 18.275 8.71099 18.2761ZM15.6798 15.6628H1.7422V14.9485C1.74266 14.6221 1.81649 14.3 1.95823 14.006C2.09996 13.7119 2.30597 13.4535 2.56103 13.2499L2.93996 12.945C3.24555 12.7003 3.49227 12.3901 3.66189 12.0373C3.83151 11.6845 3.9197 11.2981 3.91995 10.9066V7.38736C3.91995 6.1167 4.42471 4.89808 5.32321 3.99958C6.2217 3.10109 7.44032 2.59632 8.71099 2.59632C9.98165 2.59632 11.2003 3.10109 12.0988 3.99958C12.9973 4.89808 13.502 6.1167 13.502 7.38736V10.9066C13.5016 11.2988 13.5895 11.6861 13.7591 12.0397C13.9288 12.3933 14.1759 12.7042 14.482 12.9493L14.8609 13.2542C15.1154 13.4574 15.3211 13.7151 15.4628 14.0083C15.6045 14.3016 15.6787 14.6228 15.6798 14.9485V15.6628Z" />
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 18 20">
+            <path
+                d="M8.69564 8.69565C7.83572 8.69565 6.99511 8.44066 6.28011 7.96291C5.56512 7.48517 5.00785 6.80613 4.67877 6.01167C4.34969 5.21721 4.26359 4.34301 4.43135 3.49961C4.59911 2.65621 5.01321 1.88151 5.62126 1.27345C6.22931 0.665396 7.00402 0.251306 7.84742 0.0835442C8.69081 -0.0842176 9.56502 0.00188384 10.3595 0.330961C11.1539 0.660037 11.833 1.21731 12.3107 1.93231C12.7885 2.6473 13.0435 3.48791 13.0435 4.34783C13.0435 5.50094 12.5854 6.60683 11.77 7.42221C10.9546 8.23758 9.84875 8.69565 8.69564 8.69565ZM8.69564 1.73913C8.17969 1.73913 7.67532 1.89213 7.24632 2.17878C6.81733 2.46542 6.48296 2.87285 6.28552 3.34952C6.08807 3.8262 6.03641 4.35072 6.13707 4.85676C6.23772 5.3628 6.48618 5.82762 6.85101 6.19245C7.21584 6.55729 7.68067 6.80574 8.18671 6.9064C8.69274 7.00706 9.21727 6.9554 9.69394 6.75795C10.1706 6.5605 10.578 6.22614 10.8647 5.79714C11.1513 5.36814 11.3043 4.86378 11.3043 4.34783C11.3043 3.65596 11.0295 2.99243 10.5403 2.5032C10.051 2.01398 9.38751 1.73913 8.69564 1.73913Z" />
+            <path
+                d="M16.5217 20H0.869565C0.638942 20 0.417765 19.9084 0.25469 19.7453C0.0916146 19.5823 0 19.3611 0 19.1305V16.5218C0 14.6768 0.732917 12.9074 2.03752 11.6028C3.34212 10.2982 5.11154 9.56525 6.95652 9.56525H10.4348C12.2798 9.56525 14.0492 10.2982 15.3538 11.6028C16.6584 12.9074 17.3913 14.6768 17.3913 16.5218V19.1305C17.3913 19.3611 17.2997 19.5823 17.1366 19.7453C16.9735 19.9084 16.7524 20 16.5217 20ZM1.73913 18.2609H15.6522V16.5218C15.6522 15.138 15.1025 13.811 14.124 12.8325C13.1456 11.8541 11.8185 11.3044 10.4348 11.3044H6.95652C5.57278 11.3044 4.24572 11.8541 3.26727 12.8325C2.28882 13.811 1.73913 15.138 1.73913 16.5218V18.2609Z" />
+        </symbol>
+        <symbol id="icon-burger" viewBox="0 0 23 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 2H0V0H23V2Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 9H0V7H23V9Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23 16H0V14H23V16Z" />
+        </symbol>
+        <symbol id="icon-arrow-side" viewBox="0 0 12 20">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                <g transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+                    <polygon
+                        points="-0.207106781 0.707106781 1.20710678 -0.707106781 10.9142136 9 1.20710678 18.7071068 -0.207106781 17.2928932 8.085 9">
+                    </polygon>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 19 18">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M18.3388 1.57532L2.07535 17.8388L0.661133 16.4246L16.9246 0.161105L18.3388 1.57532Z" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.9246 17.8388L0.661165 1.57535L2.07538 0.161133L18.3388 16.4246L16.9246 17.8388Z" />
+        </symbol>
+    </svg>
+    <header class="header js-header">
+        <div class="overlay js-overlay"></div>
+        <div class="header__top">
+            <div class="container">
+                <ul class="user">
+                    <li class="user__item">
+                        <a class="user__link" href="#!">
+                            Задать вопрос
+                            <svg width="17" height="16" fill="none" class="user__icon">
+                                <use xlink:href="#icon-message"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="user__item">
+                        <a class="user__link" href="#!">
+                            Проверить состояние заказа
+                            <svg width="17" height="16" fill="none" class="user__icon">
+                                <use xlink:href="#icon-status"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__fixed">
+            <div class="container header__fixed-container">
+                <button class="header__menu-btn" type="button" aria-label="Открыть меню">
+                    <svg width="23" height="16" fill="black" class="header__menu-open">
+                        <use xlink:href="#icon-burger"></use>
+                    </svg>
+                    <svg width="23" height="16" fill="black" class="header__menu-close">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
+                </button>
+                <a href="#!" class="header__logo header__logo--fixed"><img class="header__logo-img" alt="Мария"
+                        width="195" height="43" src="img/logo.png"></a>
+                <div class="header__tel">
+                    <a href="tel:88001003131" class="header__tel-link">8&nbsp;800&nbsp;100&nbsp;31&nbsp;31</a>
+                    <p class="header__tel-text"> – по РФ бесплатно</p>
+                </div>
+                <nav class="header__nav">
+                    <ul class="menu">
+                        <li class="menu__item"><a class="menu__link" href="#!">Наши салоны</a></li>
+                        <li class="menu__item"><a class="menu__link menu__link--arrow" href="#!">Онлайн сервисы</a></li>
+                        <li class="menu__item"><a class="menu__link menu__link--arrow" href="#!">Услуги</a></li>
+                        <li class="menu__item"><a class="menu__link menu__link--arrow" href="#!">Акции</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#!">Сотрудничество</a></li>
+                    </ul>
+                    <ul class="categories categories--fixed">
+                        <li class="categories__item"><a href="#!" class="categories__link">Кухни</a></li>
+                        <li class="categories__item"><a href="#!" class="categories__link">Шкафы</a></li>
+                        <li class="categories__item"><a href="#!" class="categories__link">Ванные</a></li>
+                    </ul>
+
+                    <a href="#!" class="header__order-btn header__order-btn--fixed">Заказать проект</a>
+
+                    <div class="dashboard header__dashboard">
+                        <a href="#!" class="dashboard__link dashboard__link--location">Москва
+                            <svg width="17" height="21" fill="none" class="dashboard__icon">
+                                <use xlink:href="#icon-location"></use>
+                            </svg>
+                        </a>
+                        <a href="#!" class="dashboard__link dashboard__link--search js-search-link" aria-label="Поиск">
+                            <svg width="20" height="20" fill="black" class="dashboard__icon">
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </a>
+                        <a href="#!" class="dashboard__link dashboard__link--cell" aria-label="Уведомления">
+                            <svg width="18" height="20" fill="black" class="dashboard__icon">
+                                <use xlink:href="#icon-cell"></use>
+                            </svg>
+                        </a>
+                        <a href="#!" class="dashboard__link dashboard__link--user" aria-label="Вход">
+                            <svg width="18" height="20" fill="black" class="dashboard__icon">
+                                <use xlink:href="#icon-user"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="search js-search">
+            <div class="container">
+                <form class="search__form" action="#">
+                    <fieldset class="search__fieldset">
+                        <label class="search__label">
+                            <input class="search__input js-search-input" placeholder="Поиск по сайту" type="search" value="">
+                        </label>
+                        <button class="search__btn" type="submit">Найти</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="result js-result">
+                <div class="container">
+                    <div class="result__content">
+                        <p class="result__text">Популярные запросы</p>
+                        <ul class="result__list">
+                            <li class="result__item"><a href="#!" class="result__link">Кухонные шкафы Мария</a></li>
+                            <li class="result__item"><a href="#!" class="result__link">Кохонные шкафы серии Микс</a>
+                            </li>
+                            <li class="result__item"><a href="#!" class="result__link">Белые кухонные шкафы</a></li>
+                            <li class="result__item"><a href="#!" class="result__link">Большие кухонные шкафы</a></li>
+                            <li class="result__item"><a href="#!" class="result__link">Серия компактный кухонных
+                                    шкафов</a>
+                            </li>
+                            <li class="result__item"><a href="#!" class="result__link">Кухонные шкафы для студий</a></li>
+                        </ul>
+                        <div class="production">
+                            <p class="production__text">Продукция</p>
+                            <ul class="production__list">
+                                <li class="production__item">
+                                    <a href="#!" class="production__link">
+                                        <picture>
+                                            <source type="image/webp" srcset="img/intuit-kitchen@1x.webp, img/intuit-kitchen@2x.webp 2x">
+                                            <img class="production__img" src="img/intuit-kitchen@1x.jpg"
+                                                srcset="img/intuit-kitchen@2x.jpg 2x" alt="" loading="lazy" width="123"
+                                                height="91">
+                                        </picture>
+                                        <div class="production__details">
+                                            <h4 class="production__details-title">Кухня Intuit</h4>
+                                            <p class="production__details-price">цена от 175 806₽</p>
+                                            <p class="production__details-text">Богемная лаконичность и глянец модели
+                                                Intuit достигаются отсутствием ручек </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="production__item">
+                                    <a href="#!" class="production__link">
+                                        <picture>
+                                            <source type="image/webp" srcset="img/rimini-kitchen@1x.webp, img/rimini-kitchen@2x.webp 2x">
+                                            <img class="production__img" src="img/rimini-kitchen@1x.jpg"
+                                                srcset="img/rimini-kitchen@2x.jpg 2x" alt="" loading="lazy" width="123"
+                                                height="91">
+                                        </picture>
+                                        <div class="production__details">
+                                            <h4 class="production__details-title">Кухня Rimini</h4>
+                                            <p class="production__details-price">цена от 204 982₽</p>
+                                            <p class="production__details-text">Богемная лаконичность и глянец модели
+                                                Intuit достигаются отсутствием ручек </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__body">
+            <div class="container header__body-container">
+                <div class="header__body-left">
+                    <a href="#!" class="header__logo"><img class="header__logo-img" alt="Мария" width="221" height="53"
+                            src="img/logo.png"></a>
+                    <a href="#!" class="header__order-btn">Заказать проект</a>
+                </div>
+                <div class="header__body-right">
+                    <ul class="categories">
+                        <li class="categories__item"><a href="#!" class="categories__link categories__link--current">Кухни</a></li>
+                        <li class="categories__item"><a href="#!" class="categories__link">Шкафы</a></li>
+                        <li class="categories__item"><a href="#!" class="categories__link">Ванные</a></li>
+                    </ul>
+                    <ul class="filters">
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                Современные
+                                <sup class="filters__link-count">43</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                Классические
+                                <sup class="filters__link-count">23</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                Неоклассика
+                                <sup class="filters__link-count">27</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                KarMa by Karim Rashid
+                                <sup class="filters__link-count">15</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                Прованс
+                                <sup class="filters__link-count">18</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                Лофт
+                                <sup class="filters__link-count">14</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                Скандинавский стиль
+                                <sup class="filters__link-count">12</sup>
+                            </a>
+                        </li>
+                        <li class="filters__item">
+                            <a href="#!" class="filters__link">
+                                <span class="filters__separator">/</span>
+                                Хай-тек
+                                <sup class="filters__link-count">11</sup>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="burgermenu">
+            <div class="burgermenu__content">
+                <div class="container">
+                    <div class="tabs">
+                        <div class="tabs__panel">
+                            <a href="#!" class="tabs__link">О компании</a>
+                            <a href="#!" class="tabs__link">Услуги</a>
+                            <a href="#!" class="tabs__link tabs__link--current">Продукция</a>
+                        </div>
+                        <div class="tabs__content">
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Кухни</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Современные</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Классические</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Неоклассика</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">KarMa by Karim Rashid</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Прованс</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Лофт</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Скандинавский стиль</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Хай-тек</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Шкафы</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Купе</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Распашные</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Гардеробные</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Ванные</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Современные</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Классические</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Сантехника</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Оборудование</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Мебель</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Для кухни</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Столовая группа</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Гостиная</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Спальня</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Для ванной</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Бытовая техника</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Варочные панели</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Духовые шкафы</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Микроволновые печи</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Посудомоечные машины</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Холодильники</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Стиральные машины</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Кофемашины</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Компактные приборы</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">Оформление интерьера</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Вытяжки</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Мойки</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Смесители</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Посуда</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Настенные покрытия</a></li>
+                            </ul>
+                            <ul class="tabs__list">
+                                <li class="tabs__item tabs__item--offset"><a href="#!"
+                                        class="tabs__item-link tabs__item-link--title">B2B</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Кухни</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Стойки ресепшн</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Барные стойки</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Ванные</a></li>
+                                <li class="tabs__item"><a href="#!" class="tabs__item-link">Туалетные комнаты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="cards__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/cupboard-mix@1x.webp, img/cupboard-mix@2x.webp 2x">
+                            <img class="cards__img" src="img/cupboard-mix@1x.jpg" srcset="img/cupboard-mix@2x.jpg 2x"
+                                alt="" loading="lazy" width="840" height="425">
+                        </picture>
+                        <div class="cards__panel cards__panel--left">
+                            <h4 class="cards__title"><a href="#!" class="cards__panel-link">Шкаф-купе Mix</a></h4>
+                            <p class="cards__descr">Дуэт дизайна и практичности сочетающиеся в одной модели</p>
+                            <div class="cards__container">
+                                <p class="cards__price">от 79 125₽</p>
+                                <a href="#!" class="cards__btn" aria-label="Шкаф-купе Mix">
+                                    <svg width="12" height="20" fill="white" class="cards__btn-icon">
+                                        <use xlink:href="#icon-arrow-side"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/cupboard-nicole@1x.webp, img/cupboard-nicole@2x.webp 2x">
+                            <img class="cards__img" src="img/cupboard-nicole@1x.jpg"
+                                srcset="img/cupboard-nicole@2x.jpg 2x" alt="" loading="lazy" width="840" height="425">
+                        </picture>
+                        <div class="cards__panel cards__panel--right">
+                            <h4 class="cards__title"><a href="#!" class="cards__panel-link">Модель Nicolle</a></h4>
+                            <p class="cards__descr">Изысканность классики в сочетании со строгостью линий модерна</p>
+                            <div class="cards__container">
+                                <p class="cards__price">от 22 400₽</p>
+                                <a href="#!" class="cards__btn" aria-label="Модель Nicolle">
+                                    <svg width="12" height="20" fill="white" class="cards__btn-icon">
+                                        <use xlink:href="#icon-arrow-side"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="portfolio">
+        <div class="portfolio__left">
+            <div class="portfolio__slider">
+                <div class="panel portfolio__panel">
+                    <a href="#!" class="panel__logo"><img class="panel__logo-img" alt="Bosch" width="180" height="42"
+                            src="./img/bosch-logo.png"></a>
+                    <div class="panel__container">
+                        <p class="panel__text">Посудомоечная машина в подарок</p>
+                        <a href="#!" class="panel__btn">
+                            <svg width="12" height="20" fill="white" class="panel__btn-icon">
+                                <use xlink:href="#icon-arrow-side"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="slider slider--big js-slider-big">
+                    <div class="slider__content">
+                        <picture>
+                            <source type="image/webp" srcset="img/blue-kitchen@1x.webp, img/blue-kitchen@2x.webp 2x">
+                            <img class="slider__img" src="img/blue-kitchen@1x.jpg" srcset="img/blue-kitchen@2x.jpg 2x"
+                                alt="" loading="lazy" width="1070" height="826">
+                        </picture>
+                    </div>
+                    <div class="slider__content">
+                        <picture>
+                            <source type="image/webp" srcset="img/loft-kitchen@1x.webp, img/loft-kitchen@2x.webp 2x">
+                            <img class="slider__img" src="img/loft-kitchen@1x.jpg" srcset="img/loft-kitchen@2x.jpg 2x"
+                                alt="" loading="lazy" width="1070" height="826">
+                        </picture>
+                    </div>
+                    <div class="slider__content">
+                        <picture>
+                            <source type="image/webp" srcset="img/pink-kitchen@1x.webp, img/pink-kitchen@2x.webp 2x">
+                            <img class="slider__img" src="img/pink-kitchen@1x.jpg" srcset="img/pink-kitchen@2x.jpg 2x"
+                                alt="" loading="lazy" width="1070" height="826">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio__right">
+            <div class="portfolio__header">
+                <h2 class="portfolio__header-title">Портфолио</h2>
+                <div class="portfolio__header-container">
+                    <p class="portfolio__header-text">Выбери свой проект и дизайнера!</p>
+                    <a href="#!" class="portfolio__header-btn">
+                        <svg width="12" height="20" fill="black" class="portfolio__header-btn-icon">
+                            <use xlink:href="#icon-arrow-side"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="slider slider--small js-slider-small">
+                <div class="slider__content">
+                    <picture>
+                        <source type="image/webp" srcset="img/loft-kitchen@1x.webp, img/loft-kitchen@2x.webp 2x">
+                        <img class="slider__img" src="img/loft-kitchen@1x.jpg" srcset="img/loft-kitchen@2x.jpg 2x"
+                            alt="" loading="lazy" width="580" height="593">
+                    </picture>
+                </div>
+                <div class="slider__content">
+                    <picture>
+                        <source type="image/webp" srcset="img/pink-kitchen@1x.webp, img/pink-kitchen@2x.webp 2x">
+                        <img class="slider__img" src="img/pink-kitchen@1x.jpg" srcset="img/pink-kitchen@2x.jpg 2x"
+                            alt="" loading="lazy" width="580" height="593">
+                    </picture>
+                </div>
+                <div class="slider__content">
+                    <picture>
+                        <source type="image/webp" srcset="img/blue-kitchen@1x.webp, img/blue-kitchen@2x.webp 2x">
+                        <img class="slider__img" src="img/blue-kitchen@1x.jpg" srcset="img/blue-kitchen@2x.jpg 2x"
+                            alt="" loading="lazy" width="580" height="593">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="container gallery__container">
+            <h2 class="gallery__title">Создайте интерьер в едином стиле вместе с "Марией"</h2>
+            <p class="gallery__text">Мебельная фабрика "Мария" — меблировка "под ключ" в едином стиле по индивиальному
+                проекту. Кухня, гостиная, ванная — в коллекциях новинок 2021 года!</p>
+            <div class="gallery__column">
+                <ul class="gallery__list gallery__list--small">
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/gallery-pink-kitchen@1x.webp, img/gallery-pink-kitchen@2x.webp 2x">
+                            <img class="gallery__img" src="img/gallery-pink-kitchen@1x.jpg"
+                                srcset="img/gallery-pink-kitchen@2x.jpg 2x" alt="" loading="lazy" width="594"
+                                height="593">
+                        </picture>
+                        <div class="gallery__item-container">
+                            <h3 class="gallery__item-title"><a href="#!" class="gallery__item-link">Кухня Jazz</a></h3>
+                            <p class="gallery__item-text">Кухня + техника + столовая группа</p>
+                        </div>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="img/mansard-kitchen@1x.webp, img/mansard-kitchen@2x.webp 2x">
+                            <img class="gallery__img" src="img/mansard-kitchen@1x.jpg"
+                                srcset="img/mansard-kitchen@2x.jpg 2x" alt="" loading="lazy" width="593" height="542">
+                        </picture>
+                        <div class="gallery__item-container">
+                            <h3 class="gallery__item-title"><a href="#!" class="gallery__item-link">Кухня Jazz</a></h3>
+                            <p class="gallery__item-text">Кухня + техника + столовая группа</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="gallery__list">
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="img/white-kitchen@1x.webp, img/white-kitchen@2x.webp 2x">
+                            <img class="gallery__img" src="img/white-kitchen@1x.jpg"
+                                srcset="img/white-kitchen@2x.jpg 2x" alt="" loading="lazy" width="664" height="475">
+                        </picture>
+                        <div class="gallery__item-container">
+                            <h3 class="gallery__item-title"><a href="#!" class="gallery__item-link">Белая кухня
+                                    WHITE</a>
+                            </h3>
+                            <p class="gallery__item-text">Кухня + техника + столовая группа</p>
+                        </div>
+                    </li>
+                    <li class="gallery__item">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="img/grey-kitchen@1x.webp, img/grey-kitchen@2x.webp 2x">
+                            <img class="gallery__img" src="img/grey-kitchen@1x.jpg" srcset="img/grey-kitchen@2x.jpg 2x"
+                                alt="" loading="lazy" width="664" height="608">
+                        </picture>
+                        <div class="gallery__item-container">
+                            <h3 class="gallery__item-title"><a href="#!" class="gallery__item-link">Белая кухня
+                                    WHITE</a></h3>
+                            <p class="gallery__item-text">Кухня + техника + столовая группа</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a href="#!" class="gallery__btn">Показать еще</a>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
