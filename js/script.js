@@ -4,7 +4,6 @@ $(document).ready(function(){
   const HEADER_HEIGHT = 369;
 
   const body = document.body;
-
   const header = document.querySelector('.js-header');
   const searchLink = document.querySelector('.js-search-link');
   const overlay = document.querySelector('.js-overlay');
@@ -50,14 +49,14 @@ $(document).ready(function(){
     bodyFixed = false;
   }
 
-  burgerMenuOpen.addEventListener('click', function() {
+  burgerMenuOpen.addEventListener('click', () => {
     header.classList.toggle('is-burgermenu-active');
     burgerMenu.classList.toggle('is-active');
     toggleBodyFixed();
     closeSearch();
   });
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > HEADER_HEIGHT) {
       header.classList.add('is-fixed');  
     } else if (!bodyFixed) {
@@ -65,19 +64,19 @@ $(document).ready(function(){
     }
   });
 
-  searchLink.addEventListener('click', function() {
+  searchLink.addEventListener('click', () => {
     search.classList.toggle('is-active');
     searchLink.classList.toggle('is-active');
     header.classList.toggle('is-search-active');
     closeBurgerMenu();
   });
   
-  searchInput.addEventListener('focus', function() {
+  searchInput.addEventListener('focus', () => {
     searchResult.classList.add('is-active');
     overlay.classList.add('is-active');
   });
   
-  searchInput.addEventListener('blur', function() {
+  searchInput.addEventListener('blur', () => {
     searchResult.classList.remove('is-active');
     overlay.classList.remove('is-active');
   });

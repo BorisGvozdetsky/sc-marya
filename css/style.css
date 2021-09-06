@@ -235,6 +235,10 @@ header.is-burgermenu-active .header__nav {
     margin-left: auto;
 }
 
+header.is-search-active .header__nav {
+    border: 0;
+}
+
 .header__dashboard {
     margin-left: auto;
     margin-right: -13px;
